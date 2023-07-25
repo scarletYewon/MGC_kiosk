@@ -1,6 +1,6 @@
 package com.test.myapplication
 
-class CoffeeMenu(info:MutableList<Menu>) {
+class AdeMenu(info:MutableList<Menu>) {
     private var sel=0
     private val info:MutableList<Menu>
     private var cnt=0
@@ -9,35 +9,35 @@ class CoffeeMenu(info:MutableList<Menu>) {
     }
     fun detail() {
         while(true){
-                for(i in info){
-                    println("${++cnt}. ${i.name} | $ ${i.price} | ${i.description}")
-                    if(cnt==5){
-                        cnt=0
-                    }
+            for(i in info){
+                println("${++cnt}. ${i.name} | $ ${i.price} | ${i.description}")
+                if(cnt==5){
+                    cnt=0
                 }
-                println("0. 이전")
-                print("select >> ")
+            }
+            println("0. 이전")
+            print("select >> ")
             try {
                 sel= readLine()!!.toInt()
                 when(sel) {
                     1 -> {
-                        Americano(info[sel-1]).displayInfo()
+                        LemonAde(info[sel-1]).displayInfo()
                         println("")
                     }
                     2 -> {
-                        CubeLatte(info[sel-1]).displayInfo()
+                        CherryCoke(info[sel-1]).displayInfo()
                         println("")
                     }
                     3 -> {
-                        VanillaLatte(info[sel-1]).displayInfo()
+                        GreenGrapeAde(info[sel-1]).displayInfo()
                         println("")
                     }
                     4 -> {
-                        VanillaAmericano(info[sel-1]).displayInfo()
+                        UnicornPink(info[sel-1]).displayInfo()
                         println("")
                     }
                     5 -> {
-                        TiramisuLatte(info[sel-1]).displayInfo()
+                        UnicornBlue(info[sel-1]).displayInfo()
                         println("")
                     }
                     0 -> {
@@ -51,16 +51,16 @@ class CoffeeMenu(info:MutableList<Menu>) {
     }
 }
 
-open class Coffee(coffees:Menu) {
+open class Ade(ade:Menu) {
 
     private val name:String
     private val price:Int
     private val description:String
 
     init {
-        this.name=coffees.name
-        this.price=coffees.price
-        this.description=coffees.description
+        this.name=ade.name
+        this.price=ade.price
+        this.description=ade.description
     }
 
     open fun displayInfo() {
@@ -70,38 +70,32 @@ open class Coffee(coffees:Menu) {
     }
 }
 
-class Americano(AmericanoData:Menu) : Coffee(AmericanoData) {
+class LemonAde(LemonAdeData:Menu) : Coffee(LemonAdeData) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class CubeLatte(cubeLatteData:Menu) : Coffee(cubeLatteData) {
+class CherryCoke(CherryCokeData:Menu) : Coffee(CherryCokeData) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class VanillaLatte(VanillaLatteData:Menu) : Coffee(VanillaLatteData) {
+class GreenGrapeAde(GreenData:Menu) : Coffee(GreenData) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class VanillaAmericano(VanillaAmericanoData:Menu) : Coffee(VanillaAmericanoData) {
+class UnicornPink(PinkData:Menu) : Coffee(PinkData) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class TiramisuLatte(TiramisuLatteData:Menu) : Coffee(TiramisuLatteData) {
+class UnicornBlue(BlueData:Menu) : Coffee(BlueData) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
-
-
-
-
-
-
