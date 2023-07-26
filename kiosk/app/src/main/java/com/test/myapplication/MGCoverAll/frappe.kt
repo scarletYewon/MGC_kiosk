@@ -10,6 +10,7 @@ class FrappeMenu(info:MutableList<Menu>) {
         this.info=info
     }
     fun detail() {
+        println("[ FRAPPE 메뉴 ]")
         while(true){
             for(i in info){
                 println("${++cnt}. ${i.name} | $ ${i.price} | ${i.description}")

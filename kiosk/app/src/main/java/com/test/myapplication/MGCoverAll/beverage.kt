@@ -11,6 +11,7 @@ class BeverageMenu(info:MutableList<Menu>) {
     }
     fun detail() {
         while(true){
+            println("[ BEVERAGE 메뉴 ]")
             for(i in info){
                 println("${++cnt}. ${i.name} | $ ${i.price} | ${i.description}")
                 if(cnt==5){
