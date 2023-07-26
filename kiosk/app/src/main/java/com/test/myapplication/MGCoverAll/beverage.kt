@@ -1,6 +1,8 @@
-package com.test.myapplication
+package com.test.myapplication.MGCoverAll
 
-class AdeMenu(info:MutableList<Menu>) {
+import com.test.myapplication.Menu
+
+class BeverageMenu(info:MutableList<Menu>) {
     private var sel=0
     private val info:MutableList<Menu>
     private var cnt=0
@@ -21,27 +23,27 @@ class AdeMenu(info:MutableList<Menu>) {
                 sel= readLine()!!.toInt()
                 when(sel) {
                     1 -> {
-                        LemonAde(info[sel-1]).displayInfo()
+                        SweetPotatoLatte(info[sel-1]).displayInfo()
                         println("")
                     }
                     2 -> {
-                        CherryCoke(info[sel-1]).displayInfo()
+                        StrawberryLatte(info[sel-1]).displayInfo()
                         println("")
                     }
                     3 -> {
-                        GreenGrapeAde(info[sel-1]).displayInfo()
+                        GreenTeaLatte(info[sel-1]).displayInfo()
                         println("")
                     }
                     4 -> {
-                        UnicornPink(info[sel-1]).displayInfo()
+                        BlackBubble(info[sel-1]).displayInfo()
                         println("")
                     }
                     5 -> {
-                        UnicornBlue(info[sel-1]).displayInfo()
+                        NutLatte(info[sel-1]).displayInfo()
                         println("")
                     }
                     0 -> {
-                        MainMenu().showMenu()
+                        break
                     }
                 }
             }catch (e:java.lang.NumberFormatException) {
@@ -51,50 +53,33 @@ class AdeMenu(info:MutableList<Menu>) {
     }
 }
 
-open class Ade(ade:Menu) {
 
-    private val name:String
-    private val price:Int
-    private val description:String
 
-    init {
-        this.name=ade.name
-        this.price=ade.price
-        this.description=ade.description
-    }
-
-    open fun displayInfo() {
-        println("-${name} 선택-")
-        println("가격 : ${price}")
-        println("설명 : ${description}")
-    }
-}
-
-class LemonAde(LemonAdeData:Menu) : Coffee(LemonAdeData) {
+class SweetPotatoLatte(Data: Menu) : OverAll(Data) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class CherryCoke(CherryCokeData:Menu) : Coffee(CherryCokeData) {
+class StrawberryLatte(Data: Menu) : OverAll(Data) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class GreenGrapeAde(GreenData:Menu) : Coffee(GreenData) {
+class GreenTeaLatte(Data: Menu) : OverAll(Data) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class UnicornPink(PinkData:Menu) : Coffee(PinkData) {
+class BlackBubble(Data: Menu) : OverAll(Data) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class UnicornBlue(BlueData:Menu) : Coffee(BlueData) {
+class NutLatte(Data: Menu) : OverAll(Data) {
     override fun displayInfo() {
         super.displayInfo()
     }

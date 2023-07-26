@@ -1,4 +1,6 @@
-package com.test.myapplication
+package com.test.myapplication.MGCoverAll
+
+import com.test.myapplication.Menu
 
 class CoffeeMenu(info:MutableList<Menu>) {
     private var sel=0
@@ -41,7 +43,7 @@ class CoffeeMenu(info:MutableList<Menu>) {
                         println("")
                     }
                     0 -> {
-                        MainMenu().showMenu()
+                        break
                     }
                 }
             }catch (e:java.lang.NumberFormatException) {
@@ -51,50 +53,33 @@ class CoffeeMenu(info:MutableList<Menu>) {
     }
 }
 
-open class Coffee(coffees:Menu) {
 
-    private val name:String
-    private val price:Int
-    private val description:String
 
-    init {
-        this.name=coffees.name
-        this.price=coffees.price
-        this.description=coffees.description
-    }
-
-    open fun displayInfo() {
-        println("-${name} 선택-")
-        println("가격 : ${price}")
-        println("설명 : ${description}")
-    }
-}
-
-class Americano(AmericanoData:Menu) : Coffee(AmericanoData) {
+class Americano(AmericanoData: Menu) : OverAll(AmericanoData) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class CubeLatte(cubeLatteData:Menu) : Coffee(cubeLatteData) {
+class CubeLatte(cubeLatteData: Menu) : OverAll(cubeLatteData) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class VanillaLatte(VanillaLatteData:Menu) : Coffee(VanillaLatteData) {
+class VanillaLatte(VanillaLatteData: Menu) : OverAll(VanillaLatteData) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class VanillaAmericano(VanillaAmericanoData:Menu) : Coffee(VanillaAmericanoData) {
+class VanillaAmericano(VanillaAmericanoData: Menu) : OverAll(VanillaAmericanoData) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class TiramisuLatte(TiramisuLatteData:Menu) : Coffee(TiramisuLatteData) {
+class TiramisuLatte(TiramisuLatteData: Menu) : OverAll(TiramisuLatteData) {
     override fun displayInfo() {
         super.displayInfo()
     }

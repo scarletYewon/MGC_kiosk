@@ -1,6 +1,8 @@
-package com.test.myapplication
+package com.test.myapplication.MGCoverAll
 
-class TeaMenu(info:MutableList<Menu>) {
+import com.test.myapplication.Menu
+
+class AdeMenu(info:MutableList<Menu>) {
     private var sel=0
     private val info:MutableList<Menu>
     private var cnt=0
@@ -21,27 +23,27 @@ class TeaMenu(info:MutableList<Menu>) {
                 sel= readLine()!!.toInt()
                 when(sel) {
                     1 -> {
-                        BlackTea(info[sel-1]).displayInfo()
+                        LemonAde(info[sel-1]).displayInfo()
                         println("")
                     }
                     2 -> {
-                        AppleCitronTea(info[sel-1]).displayInfo()
+                        CherryCoke(info[sel-1]).displayInfo()
                         println("")
                     }
                     3 -> {
-                        Chamomile(info[sel-1]).displayInfo()
+                        GreenGrapeAde(info[sel-1]).displayInfo()
                         println("")
                     }
                     4 -> {
-                        PeachIceTea(info[sel-1]).displayInfo()
+                        UnicornPink(info[sel-1]).displayInfo()
                         println("")
                     }
                     5 -> {
-                        LemonTea(info[sel-1]).displayInfo()
+                        UnicornBlue(info[sel-1]).displayInfo()
                         println("")
                     }
                     0 -> {
-                        MainMenu().showMenu()
+                        break
                     }
                 }
             }catch (e:java.lang.NumberFormatException) {
@@ -51,50 +53,33 @@ class TeaMenu(info:MutableList<Menu>) {
     }
 }
 
-open class Tea(teas:Menu) {
 
-    private val name:String
-    private val price:Int
-    private val description:String
 
-    init {
-        this.name=teas.name
-        this.price=teas.price
-        this.description=teas.description
-    }
-
-    open fun displayInfo() {
-        println("-${name} 선택-")
-        println("가격 : ${price}")
-        println("설명 : ${description}")
-    }
-}
-
-class BlackTea(AmericanoData:Menu) : Coffee(AmericanoData) {
+class LemonAde(Data: Menu) : OverAll(Data) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class AppleCitronTea(cubeLatteData:Menu) : Coffee(cubeLatteData) {
+class CherryCoke(Data: Menu) : OverAll(Data) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class Chamomile(VanillaLatteData:Menu) : Coffee(VanillaLatteData) {
+class GreenGrapeAde(Data: Menu) : OverAll(Data) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class PeachIceTea(VanillaAmericanoData:Menu) : Coffee(VanillaAmericanoData) {
+class UnicornPink(Data: Menu) : OverAll(Data) {
     override fun displayInfo() {
         super.displayInfo()
     }
 }
 
-class LemonTea(TiramisuLatteData:Menu) : Coffee(TiramisuLatteData) {
+class UnicornBlue(Data: Menu) : OverAll(Data) {
     override fun displayInfo() {
         super.displayInfo()
     }
