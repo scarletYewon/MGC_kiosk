@@ -1,5 +1,6 @@
 package com.test.myapplication
 
 fun main(){
-    showMenu()
+    val menuSelect=MainMenu()
+    menuSelect.showMenu()
 }
