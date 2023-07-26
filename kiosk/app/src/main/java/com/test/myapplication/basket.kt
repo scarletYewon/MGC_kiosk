@@ -1,44 +1,34 @@
 package com.test.myapplication
-class Basket(MGC:Menu) {
-    private var basketinfo:Menu
-    init {
-        this.basketinfo=MGC
-    }
-//    fun basketInfo() :String {
-//        var basket = BasketSingletonClass.getInstance()
-//
-////        basket.setMGC(basketinfo)
-////        var result=basket.getMGC()
-////        return "장바구니목록 : ${result.name}"
-//    }
-}
 
 
-class BasketSingletonClass private constructor(mgcMenu:Menu) {
-    private lateinit var basketList : MutableList<Menu>
-    private val mgcMenu : Menu
 
-    init {
-        this.mgcMenu=mgcMenu
-    }
+class BasketSingletonClass private constructor() {
+    private val basketInfo = mutableListOf<Menu>()
+
+
 
     companion object {
         @Volatile private var instance: BasketSingletonClass? = null
 
+
         fun getInstance(): BasketSingletonClass {
             if(instance == null) {
                 synchronized(this) {
-//                    instance = BasketSingletonClass()
+                    instance = BasketSingletonClass()
                 }
             }
             return instance!!
         }
     }
-//    fun setMGC(mgcMenu:Menu) {
-//
-//    }
+    fun mgcBasketAdd(mgc:Menu) {
+        basketInfo.add(mgc)
+    }
+    fun mgcBasketInfo() {
+        println("- 장바구니 목록 -")
+        for(i in basketInfo){
+            println("${i.name} | $ ${i.price}")
+        }
+    }
 
-//    fun getMGC(): Menu{
-//
-//    }
+
 }
