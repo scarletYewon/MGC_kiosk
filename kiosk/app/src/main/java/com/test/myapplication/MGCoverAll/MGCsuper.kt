@@ -1,7 +1,7 @@
 package com.test.myapplication.MGCoverAll
 
+import com.test.myapplication.Basket
 import com.test.myapplication.Menu
-import com.test.myapplication.aa
 
 open class OverAll(coffees: Menu) {
     private var sel=0
@@ -10,7 +10,7 @@ open class OverAll(coffees: Menu) {
     private val price:Int
     private val description:String
 
-    private val a1=aa(coffees)
+    private val basketList=Basket(coffees)
 
     init {
         this.name=coffees.name
@@ -35,7 +35,7 @@ open class OverAll(coffees: Menu) {
         when(sel){
             1 -> {
                 print("${name} (이/가) 장바구니에 추가되었습니다.\n")
-                println(a1.mm())
+//                println(basketList.mm())
             }
             2 -> {
                 print("취소되었습니다.")
