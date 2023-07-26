@@ -32,4 +32,11 @@ class BasketSingletonClass private constructor() {
             println("장바구니가 비었습니다.")
         }
     }
+    fun mgcBasketTotal() : Int{
+        var hap=0
+        for(i in basketInfo){
+            hap+=i.price
+        }
+        return hap
+    }
 }

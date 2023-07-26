@@ -5,6 +5,8 @@ import com.test.myapplication.MGCoverAll.BeverageMenu
 import com.test.myapplication.MGCoverAll.CoffeeMenu
 import com.test.myapplication.MGCoverAll.FrappeMenu
 import com.test.myapplication.MGCoverAll.TeaMenu
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 
 class MainMenu{
@@ -20,7 +22,8 @@ class MainMenu{
             println("4. 프라페    | FRAPPE")
             println("5. 음료      | BEVERAGE")
             println("6. 장바구니")
-            println("7. 종료")
+            println("7. 주문하기")
+            println("8. 종료")
             println("==========")
             print("Select >> ")
             try {
@@ -49,8 +52,36 @@ class MainMenu{
                     6 -> {
                         val basket=BasketSingletonClass.getInstance()
                         basket.mgcBasketInfo()
+                        println("")
                     }
                     7 -> {
+                        val todayDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern(
+                            "yyyy-MM-dd HH:mm:ss"))
+                        val basket=BasketSingletonClass.getInstance()
+                        basket.mgcBasketInfo()
+                        var total=basket.mgcBasketTotal()
+                        println("주문하시겠습니까?")
+                        println("1. 확인    2. 메뉴판")
+                        print(" >> ")
+                        select= readLine()!!.toInt()
+                        when(select){
+                            1 -> {
+                                val withdrawRange = (3000..10000)
+                                val withdraw = withdrawRange.random()
+                                println("현재 잔액은 $ ${withdraw}")
+                                if(total>withdraw){
+                                    println("현재 잔액은 ${withdraw} 으로 ${total-withdraw}이 부족해서 주문할 수 없습니다.")
+                                }else if(total<withdraw){
+                                    println("결제되었습니다. ${todayDate}")
+                                    println("남은 잔액 $ ${withdraw-total}")
+                                }
+                                println("")
+                                println("이용해주셔서 감사합니다.")
+                                System.exit(0)
+                            }
+                        }
+                    }
+                    8 -> {
                         System.exit(0)
                     }
                 }
