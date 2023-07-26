@@ -11,12 +11,9 @@ class MainMenu{
     private var select=0
     fun showMenu(){
         while(true){
-            println("=================")
-            println("   MEGA COFFEE")
-            println("=================")
-            println("==========")
-            println("[MGC MENU]")
-            println("==========")
+            println("=====================")
+            println("   [ MEGA COFFEE ]")
+            println("=====================")
             println("1. 커피      | COFFEE")
             println("2. 티        | TEA")
             println("3. 에이드    | ADE")

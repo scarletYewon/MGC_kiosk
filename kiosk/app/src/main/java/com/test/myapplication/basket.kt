@@ -28,7 +28,8 @@ class BasketSingletonClass private constructor() {
         for(i in basketInfo){
             println("${i.name} | $ ${i.price}")
         }
+        if(basketInfo.isEmpty()){
+            println("장바구니가 비었습니다.")
+        }
     }
-
-
 }
