@@ -1,16 +1,16 @@
 package com.test.myapplication.MGCoverAll
 
+import com.test.myapplication.BasketSingletonClass
 import com.test.myapplication.Menu
-import com.test.myapplication.aa
 
 open class OverAll(coffees: Menu) {
+    private var info:Menu=coffees
     private var sel=0
 
     private val name:String
     private val price:Int
     private val description:String
 
-    private val a1=aa(coffees)
 
     init {
         this.name=coffees.name
@@ -35,7 +35,8 @@ open class OverAll(coffees: Menu) {
         when(sel){
             1 -> {
                 print("${name} (이/가) 장바구니에 추가되었습니다.\n")
-                println(a1.mm())
+                var shopping=BasketSingletonClass.getInstance()
+                shopping.mgcBasketAdd(info)
             }
             2 -> {
                 print("취소되었습니다.")

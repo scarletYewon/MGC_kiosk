@@ -22,7 +22,8 @@ class MainMenu{
             println("3. 에이드    | ADE")
             println("4. 프라페    | FRAPPE")
             println("5. 음료      | BEVERAGE")
-            println("6. 종료")
+            println("6. 장바구니")
+            println("7. 종료")
             println("==========")
             print("Select >> ")
             try {
@@ -49,6 +50,10 @@ class MainMenu{
                         BeverageMenu(beverageInfo).detail()
                     }
                     6 -> {
+                        val basket=BasketSingletonClass.getInstance()
+                        basket.mgcBasketInfo()
+                    }
+                    7 -> {
                         System.exit(0)
                     }
                 }
