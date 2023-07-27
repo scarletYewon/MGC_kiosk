@@ -39,4 +39,7 @@ class BasketSingletonClass private constructor() {
         }
         return hap
     }
+    fun mgcBasketSize() : Int{
+        return basketInfo.size
+    }
 }
