@@ -57,6 +57,7 @@ class MainMenu{
                     7 -> {
                         val todayDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern(
                             "yyyy-MM-dd HH:mm:ss"))
+                        val now = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HHmm"))!!.toInt()
                         val basket=BasketSingletonClass.getInstance()
                         basket.mgcBasketInfo()
                         var total=basket.mgcBasketTotal()
@@ -66,6 +67,11 @@ class MainMenu{
                         select= readLine()!!.toInt()
                         when(select){
                             1 -> {
+                                if(now in 2310..2320){
+                                    println("현재 시각은 ${todayDate.slice(IntRange(11,15))}입니다.")
+                                    println("은행 점검 시간은 23시 10분 ~ 23시 20분이므로 결제할 수 없습니다.")
+                                    break
+                                }
                                 val withdrawRange = (3000..10000)
                                 val withdraw = withdrawRange.random()
                                 println("현재 잔액은 $ ${withdraw}")
