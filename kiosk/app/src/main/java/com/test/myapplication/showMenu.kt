@@ -5,8 +5,10 @@ import com.test.myapplication.MGCoverAll.BeverageMenu
 import com.test.myapplication.MGCoverAll.CoffeeMenu
 import com.test.myapplication.MGCoverAll.FrappeMenu
 import com.test.myapplication.MGCoverAll.TeaMenu
+import kotlinx.coroutines.*
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import kotlin.concurrent.thread
 
 
 class MainMenu{
