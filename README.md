@@ -787,8 +787,5 @@ class MegaThread : Thread(){
 ```
 
 # 실행화면
-![%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4 19 50](https://github.com/scarletYewon/MGC_kiosk/assets/81704418/9df9dfcb-7834-45a4-aa3c-ce6c5cf9a77f)
-
-**Lv5_2 예외처리**
-
-![%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4 28 13](https://github.com/scarletYewon/MGC_kiosk/assets/81704418/a5cea892-0295-44f4-bede-0ad45498d532)
+용랑이슈 - > 로 노션 링크 통해 확인가능
+링크 : https://www.notion.so/scarletyewon/4_-_-_-051ab53bc9564018b6f1354bbb06b4e4#b333e464b13b4767869de8887fbbd33b
