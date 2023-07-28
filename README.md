@@ -11,7 +11,8 @@
 
 # 데이터값
 
-![%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4 11 47](https://github.com/scarletYewon/MGC_kiosk/assets/81704418/a4da7de7-4e98-419f-a38b-be5fb87e21a1)
+<img width="991" alt="스크린샷 2023-07-27 오후 4 19 50" src="https://github.com/scarletYewon/MGC_kiosk/assets/81704418/286f328d-09a3-4e96-a6b1-000fd19eadff">
+
 
 # 파일 목록
 
