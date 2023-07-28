@@ -1,5 +1,6 @@
 package com.test.myapplication
 
-fun main(){
+//lv0
+fun main() {
     showMenu()
 }
