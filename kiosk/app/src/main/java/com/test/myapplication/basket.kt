@@ -1,18 +1,17 @@
 package com.test.myapplication
 
 
-
 class BasketSingletonClass private constructor() {
     private val basketInfo = mutableListOf<Menu>()
 
 
-
     companion object {
-        @Volatile private var instance: BasketSingletonClass? = null
+        @Volatile
+        private var instance: BasketSingletonClass? = null
 
 
         fun getInstance(): BasketSingletonClass {
-            if(instance == null) {
+            if (instance == null) {
                 synchronized(this) {
                     instance = BasketSingletonClass()
                 }
@@ -20,26 +19,30 @@ class BasketSingletonClass private constructor() {
             return instance!!
         }
     }
-    fun mgcBasketAdd(mgc:Menu) {
+
+    fun mgcBasketAdd(mgc: Menu) {
         basketInfo.add(mgc)
     }
+
     fun mgcBasketInfo() {
         println("- 장바구니 목록 -")
-        for(i in basketInfo){
+        for (i in basketInfo) {
             println("${i.name} | $ ${i.price}")
         }
-        if(basketInfo.isEmpty()){
+        if (basketInfo.isEmpty()) {
             println("장바구니가 비었습니다.")
         }
     }
-    fun mgcBasketTotal() : Int{
-        var hap=0
-        for(i in basketInfo){
-            hap+=i.price
+
+    fun mgcBasketTotal(): Int {
+        var hap = 0
+        for (i in basketInfo) {
+            hap += i.price
         }
         return hap
     }
-    fun mgcBasketSize() : Int{
+
+    fun mgcBasketSize(): Int {
         return basketInfo.size
     }
 }
