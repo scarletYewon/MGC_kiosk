@@ -469,6 +469,7 @@ class NutLatte(Data: Menu) : OverAll(Data) {
 ```
 
 ### MGCsuper.kt
+커피 클래스, mutableList데이터 타입을 Menu로 받는 매개변수로 지정하고 받아온 커피 데이터들을 for문을 돌려 뿌려준다. 그리고 각각 번호를 클릭했을 때 각 번호에 맞는 인덱스의 데이터클래스를 클래스에서 받아서 상속 받고 있는 부모클래스의 매개변수에게 또 넘겨준다. 그럼 부모클래스에서 그 데이터를 가지고 보여주는 함수를 하나 만들어준다. 각 메뉴 클래스에서는 super.displayInfo()를 쓰기 때문에 부모클래스의 데이터를 보여주는 함수를 보여준다.
 
 ```kotlin
 package com.test.myapplication.MGCoverAll
@@ -545,6 +546,7 @@ fun main(){
 ```
 
 ## menu.kt
+데이터클래스 : 커피이름, 가격, 설명
 
 ```kotlin
 package com.test.myapplication
@@ -557,6 +559,7 @@ data class Menu(
 ```
 
 ## showMenu.kt
+mutablelist에 데이터클래스 메뉴들을 담아서 사용자가 누른 번호에 맞게 보내주고 데이터를 처리. 장바구니 보기 클릭시 싱글톤객체의 함수를 불러와 리스트에 for문을 돌려 보여준다.
 
 ```kotlin
 package com.test.myapplication
@@ -712,6 +715,7 @@ class MainMenu{
 ```
 
 ## basket.kt
+장바구니목록을 채우기 위해 add함수, 장바구니목록을 보여주기 위해 Info함수, 장바구니의 총 가격을 보여주기 위해 total함수를 생성. 받아온 데이터클래스를 리스트에 담기 위해 MutableListOf<Menu>() 생성.
 
 ```kotlin
 package com.test.myapplication
@@ -757,6 +761,7 @@ class BasketSingletonClass private constructor() {
 ```
 
 ## thread.kt
+basket 변수에 싱클톤 인스턴스를 가져온 후 mgcBasketSize 함수 호출. 호출한 함수는 cnt라는 변수에 basket 안에 리스트의 개수를 저장. while(true)로 무한 루프를 걸어두고 delay(5000)을 주어서 프로그램이 종료할 때까지 5초마다 현재 주문 현황을 출력.
 
 ```kotlin
 package com.test.myapplication
