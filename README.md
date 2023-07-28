@@ -5,7 +5,6 @@
 
 **깃허브 : https://github.com/scarletYewon/MGC_kiosk**
 
-## 목차
 
 ![img](https://github.com/scarletYewon/MGC_kiosk/assets/81704418/6ba421d1-3e8a-40d3-b49a-6c6f618b5cdd)
 
