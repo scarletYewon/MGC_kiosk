@@ -715,7 +715,7 @@ class MainMenu{
 ```
 
 ## basket.kt
-장바구니목록을 채우기 위해 add함수, 장바구니목록을 보여주기 위해 Info함수, 장바구니의 총 가격을 보여주기 위해 total함수를 생성. 받아온 데이터클래스를 리스트에 담기 위해 MutableListOf<Menu>() 생성.
+장바구니목록을 채우기 위해 add함수, 장바구니목록을 보여주기 위해 Info함수, 장바구니의 총 가격을 보여주기 위해 total함수를 생성. 받아온 데이터클래스를 리스트에 담기 위해 MutableListOf<Menu>()생성.
 
 ```kotlin
 package com.test.myapplication
@@ -787,5 +787,7 @@ class MegaThread : Thread(){
 ```
 
 # 실행화면
+
 용랑이슈 - > 로 노션 링크 통해 확인가능
+
 링크 : https://www.notion.so/scarletyewon/4_-_-_-051ab53bc9564018b6f1354bbb06b4e4#b333e464b13b4767869de8887fbbd33b
