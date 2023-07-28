@@ -3,6 +3,7 @@
 **팀원 : 이예원 김현걸 남윤희 윤동현 임두형**
 
 **깃허브 : https://github.com/scarletYewon/MGC_kiosk**
+
 **노션 : https://www.notion.so/scarletyewon/5-5-d1de9486375a43bea409ef097f46dfdc**
 
 
