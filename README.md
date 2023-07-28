@@ -16,12 +16,10 @@
 
 # 파일 목록
 
-*( 각 코드 스니펫 캡션 참고 )*
-
 ## Package[MGCCoverAll]
 
 ### coffee.kt
-
+커피 클래스, mutableList데이터 타입을 Menu로 받는 매개변수로 지정하고 받아온 커피 데이터들을 for문을 돌려 뿌려준다. 그리고 각각 번호를 클릭했을 때 각 번호에 맞는 인덱스의 데이터클래스를 클래스에서 받아서 상속 받고 있는 부모클래스의 매개변수에게 또 넘겨준다. 그럼 부모클래스에서 그 데이터를 가지고 보여주는 함수를 하나 만들어준다. 각 메뉴 클래스에서는 super.displayInfo()를 쓰기 때문에 부모클래스의 데이터를 보여주는 함수를 보여준다.
 ```kotlin
 package com.test.myapplication.MGCoverAll
 
